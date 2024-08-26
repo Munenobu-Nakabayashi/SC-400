@@ -1,0 +1,534 @@
+【①SC-200:Microsoft Copilot for Security を使用して脅威を軽減する】
+(1)生成 AI の基礎 
+1. c
+2. b
+3. c
+
+(2)Microsoft Copilot for Security について説明する
+1. c
+2. a
+3. b
+
+(3)Microsoft Copilot for Security のコア機能について説明する
+1. a
+2. a
+3. b
+4. a
+5. a
+
+(4)Microsoft Copilot for Security の埋め込みエクスペリエンスについて説明する
+1. b
+2. b
+3. c
+
+【②SC-200:Microsoft Defender XDR を使って脅威を軽減する】
+(1)Microsoft Defender XDR の脅威に対する保護の概要
+1. a
+2. c
+3. b
+
+(2)Microsoft 365 Defender を使用してインシデントを軽減する
+1. c
+2. a
+3. c
+
+(3)Microsoft Defender for Office 365 を使用してリスクを修復する
+1. b
+2. a
+3. c
+
+(4)Microsoft Defender for Identity で環境を守る
+1. a
+2. a
+3. c
+
+(5)Microsoft Defender for Cloud Apps を使用して、クラウド アプリとサービスをセキュリティで保護する
+1. c
+2. a
+3. c
+4. b
+5. a
+
+【③SC-200: Microsoft Purview を使用して脅威を軽減する】
+(1)Microsoft 365 を使用したデータ損失防止アラートへの対応
+1. c
+2. b
+3. b
+
+(2)Microsoft Purview でインサイダー リスクを管理する
+1. b
+2. a
+3. c
+4. c
+5. a
+
+(3)Microsoft Purview 監査を使用した検索と調査
+1. a
+2. b
+3. c
+4. a
+5. c
+
+(4)Microsoft Purview でコンテンツ検索を使用して脅威を調査する
+1. c
+2. b
+3. b
+
+【④SC-200: Microsoft Defender for Cloud を使用して脅威を軽減する】
+(1)Microsoft Defender for Cloud を使用してクラウド ワークロード保護を計画する
+1. b
+2. c
+3. a
+
+(2)Azure アセットを Microsoft Defender for Cloud に接続する
+1. c
+2. a
+3. a
+
+(3)クラウド セキュリティ態勢管理を管理する 
+1. c
+2. b
+3. a
+
+(4)Microsoft Defender for Cloud のクラウド ワークロード保護について説明する
+1. a
+2. c
+3. c
+
+(5)Microsoft Defender for Cloud を使用してセキュリティ アラートを修復する
+1. c
+2. c
+3. a
+
+【⑤SC-200: エンドポイントに Microsoft Defender を使用して脅威を軽減する】
+(1)Microsoft Defender for Endpoint で脅威から保護する
+1. a
+2. a
+3. c
+
+(2)Microsoft Defender for Endpoint 環境をデプロイする
+1. b
+2. a
+3. b
+
+(3)Microsoft Defender for Endpoint を使用して Windows のセキュリティ強化を実装する 
+1. c
+2. b
+3. a
+
+(4)Microsoft Defender for Endpoint でデバイスの調査を実行する
+1. c
+2. b
+3. c
+
+(5)Microsoft Defender for Endpoint を使用してデバイスでアクションを実行する
+1. b
+2. c
+
+(6)Microsoft Defender for Endpoint を使用して証拠とエンティティの調査を実行する
+1. a
+2. b
+3. a
+
+(7)Microsoft Defender for Endpoint を使用した自動化の構成および管理
+1. a
+2. a
+3. a
+
+(8)Microsoft Defender for Endpoint でアラートと検出用に構成する
+1. c
+2. a
+3. a
+
+(9)Microsoft Defender for Endpoint で脅威と脆弱性の管理を使用する
+1. b
+2. b
+3. c
+
+【⑥SC-200: Kusto クエリ言語 (KQL) を使用して Microsoft Sentinel のクエリを作成する】
+(1)Microsoft Sentinel の KQL ステートメントの構築 
+1. a
+2. c
+
+(2)KQL を使用してクエリ結果を分析する
+1. c
+2. c
+3. b
+
+(3)KQL を使用して複数のテーブル用のステートメントを作成する
+1. b
+2. b
+3. a
+
+(4)Kusto クエリ言語を使用して Microsoft Sentinel でデータを操作する
+1. c
+2. b
+3. b
+
+【⑦SC-200: Microsoft Sentinel で脅威ハンティングを実行する】
+(1)Microsoft Sentinel の脅威ハンティングの概念について説明する
+1. a
+2. c
+3. c
+
+(2)Microsoft Sentinel で検索ジョブを使用する
+1. a
+2. b
+3. c
+
+(3)Microsoft Sentinel でノートブックを使用して脅威を追求する
+1. b
+2. b
+3. a
+
+【⑧SC-200: Microsoft Sentinel 環境を構成する】
+(1)Microsoft Sentinel の概要
+1. b
+2. c
+3. b
+
+(2)Microsoft Sentinel ワークスペースを作成および管理する
+1. c
+2. c
+3. a
+	
+(3)Microsoft Sentinel のクエリ ログ
+1. a
+2. a
+3. c
+
+(4)Microsoft Sentinel でウォッチリストを使用する
+1. c
+2. b
+
+(5)Microsoft Sentinel の脅威インテリジェンスを利用する 
+1. c
+2. b
+3. c
+
+【⑨SC-200: Microsoft Sentinel を使用して検出を作成し、調査を実行する】
+(1)Microsoft Sentinel でのオートメーション
+1. a
+2. b
+3. c
+
+(2)行動分析を使用して脅威を特定する
+1. a
+2. b
+3. c
+
+(3)Microsoft Sentinel でのデータの正規化
+1. a
+2. b
+3. c
+
+(4)Microsoft Sentinel でのコンテンツのン管理
+1. c
+2. b
+3. b
+
+【⑩SC-200: ログを Microsoft Sentinel に接続する】
+(1)データ コネクタを使用して Microsoft Sentinel にデータを接続する
+1. b
+2. b
+3. c
+
+(2)Microsoft サービスを Microsoft Sentinel に接続する
+1. b
+2. a
+3. c
+
+(3)Microsoft Defender XDR を Microsoft Sentinel に接続する
+1. c
+2. a
+3. a
+
+(4)Windows ホストを Microsoft Sentinel に接続する
+1. a
+2. a
+3. a
+
+(5)Microsoft Sentinel に Common Event Format のログを接続する
+1. a
+2. a
+3. c
+
+(6)Microsoft Sentinel に syslog データ ソースを接続する
+1. c
+2. b
+3. c
+
+(7)脅威インジケーターを Microsoft Sentinel に接続する
+1. c
+2. c
+3. c
+
+--------------------
+■Microsoft サイバーセキュリティ アーキテクト
+【①SC-100: セキュリティのベスト プラクティスと優先順位に沿ったソリューションの設計】
+(1)ゼロ トラストとベスト プラクティス フレームワークの概要
+1. b
+2. b
+3. c
+4. c
+
+(2)クラウド導入フレームワーク (CAF) と Well-Architected Framework (WAF) に沿ったソリューションを設計する
+1. b
+2. d
+3. c
+
+(3)Microsoft Cybersecurity リファレンス アーキテクチャ (MCRA) および Microsoft クラウド セキュリティ ベンチマーク (MCSB) に沿ったソリューションを設計する
+1. c
+2. b
+3. a
+4. b
+
+(4)Microsoft セキュリティ ベスト プラクティスに基づいて、ランサムウェアやその他の攻撃に対する回復性戦略を設計する
+1. c
+2. b
+3. c
+
+(5)セキュリティのベスト プラクティスと優先順位に沿ったソリューションを設計する
+1. b
+2. b
+3. b
+
+【②SC-100: セキュリティ オペレーション、ID、コンプライアンス機能の設計】
+(1)規制コンプライアンスのソリューションを設計する
+1. a
+2. a
+3. a
+4. a
+5. a
+
+(2)ID およびアクセス管理のソリューションを設計する 
+1. b
+2. c
+3. c
+4. c
+
+(3)特権アクセスをセキュリティで保護するためのソリューションを設計する
+1. a
+2. c
+3. c
+4. d
+5. c
+
+(4)セキュリティ オペレーションのソリューションを設計する
+1. a
+2. a
+3. d
+4. d
+
+(5)セキュリティ オペレーション、ID、コンプライアンスの機能を設計する
+1. b
+2. c
+3. c
+
+【③SC-100: アプリケーションとデータのセキュリティ ソリューションの設計】
+(1)Microsoft 365 をセキュリティで保護するためのソリューションを設計する 
+1. a
+2. b
+3. b
+4. b
+
+(2)アプリケーションをセキュリティで保護するためのソリューションを設計する
+1. b
+2. a
+3. b
+4. c
+
+(3)組織のデータをセキュリティで保護するためのソリューションを設計する
+1. a
+2. a
+3. b
+4. a
+
+(4)アプリケーションとデータのセキュリティ ソリューションを設計する
+1. c
+2. c
+3. a
+
+【④SC-100: インフラストラクチャのセキュリティ ソリューションの設計】
+(1)SaaS、PaaS、IaaS サービスをセキュリティで保護するための要件を指定する
+1. d
+2. c
+3. c
+
+(2)ハイブリッドおよびマルチクラウド環境でのセキュリティ態勢管理のためのソリューションを設計する
+1. c
+2. c
+3. c
+4. d
+
+(3)サーバーとクライアントのエンドポイントをセキュリティで保護するためのソリューションを設計する
+1. b
+2. b
+3. a
+4. c
+
+(4)ネットワーク セキュリティのソリューションを設計する
+1. b
+2. b
+3. c
+4. b
+
+(5)インフラストラクチャのセキュリティ ソリューションの設計
+1. c
+2. c
+3. c
+
+--------------------
+■Microsoft セキュリティ運用アナリスト
+【①SC-200:Microsoft Defender XDR を使って脅威を軽減する】
+(1)Microsoft Defender XDR の脅威に対する保護の概要
+1. a
+2. c
+3. b
+
+(2)Microsoft 365 Defender を使用してインシデントを軽減する
+1. c
+2. a
+3. c
+
+(3) Microsoft Defender for Office 365 でリスクを修復する
+1. b
+2. a
+3. c
+
+(4)Microsoft Defender for Identity で環境を守る
+1. a
+2. a
+3. c
+
+(5)Microsoft Defender for Cloud Apps を使用して、クラウド アプリとサービスをセキュリティで保護する
+1. c
+2. a
+3. c
+4. b
+5. a
+
+【②SC-200:Microsoft Copilot for Security を使用して脅威を軽減する】
+(1)生成 AI の基礎
+1. c
+2. b
+3. c
+
+(2)Microsoft Copilot for Security について説明する
+1. c
+2. a
+3. b
+
+(3)Microsoft Copilot for Security のコア機能について説明する 
+1. a
+2. c
+3. b
+4. a
+5. a
+
+(4)Microsoft Copilot for Security の埋め込みエクスペリエンスについて説明する
+1. b
+2. b
+3. c
+
+【③SC-200: Microsoft Purview を使用して脅威を軽減する】
+(1)Microsoft 365 を使用したデータ損失防止アラートへの対応
+1. c
+2. c
+3. b
+
+(2)Microsoft Purview でインサイダー リスクを管理する
+1. b
+2. a
+3. c
+4. c
+5. a
+
+(3)Microsoft Purview 監査を使用した検索と調査
+1. a
+2. b
+3. c
+4. a
+5. c
+
+(4)Microsoft Purview でコンテンツ検索を使用して脅威を調査する
+1. c
+2. b
+3. b
+
+【④SC-200: エンドポイントに Microsoft Defender を使用して脅威を軽減する】
+(1)Microsoft Defender for Endpoint で脅威から保護する
+1. b
+2. a
+3. c
+
+(2)Microsoft Defender for Endpoint 環境をデプロイする
+1. b
+2. a
+3. b
+
+(3)Microsoft Defender for Endpoint を使用して Windows のセキュリティ強化を実装する
+1. c
+2. b
+3. a
+
+(4)Microsoft Defender for Endpoint でデバイスの調査を実行する
+1. c
+2. b
+3. c
+
+(5)Microsoft Defender for Endpoint を使用してデバイスでアクションを実行する
+1. b
+2. c
+
+(6)Microsoft Defender for Endpoint を使用して証拠とエンティティの調査を実行する
+1. a
+2. b
+3. a
+
+(7)Microsoft Defender for Endpoint を使用した自動化の構成および管理
+1. a
+2. a
+3. a
+
+(8)Microsoft Defender for Endpoint でアラートと検出用に構成する
+1. c
+2. a
+3. a
+
+(9)Microsoft Defender for Endpoint で脅威と脆弱性の管理を使用する
+1. b
+2. b
+3. c
+
+【⑤SC-200: Microsoft Defender for Cloud を使用して脅威を軽減する】
+(1)Microsoft Defender for Cloud を使用してクラウド ワークロード保護を計画する
+1. b
+2. c
+3. a
+
+(2)Azure アセットを Microsoft Defender for Cloud に接続する
+1. c
+2. a
+3. a
+
+(3)Azure 以外のリソースを Microsoft Defender for Cloud に接続する
+1. b
+2. b
+3. b
+
+(4)クラウド セキュリティ態勢管理を管理する
+1. c
+2. b
+3. a
+
+(5)Microsoft Defender for Cloud のクラウド ワークロード保護について説明する
+1. a
+2. c
+3. c
+
+(6)Microsoft Defender for Cloud を使用してセキュリティ アラートを修復する 
+1. c
+2. c
+3. a
+
