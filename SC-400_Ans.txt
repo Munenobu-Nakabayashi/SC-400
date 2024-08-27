@@ -1,0 +1,366 @@
+【①SC-400: Microsoft 365 で Information Protection を実装する】
+(1)Microsoft Purview における情報保護とデータ ライフサイクル管理の概要
+1. c
+2. a
+3. a
+4. c
+5. b
+
+(2)保護とガバナンスのためにデータを分類する
+1. b
+2. b
+3. c
+4. a
+5. b
+
+(3)機密情報の種類を作成および管理する
+1. c
+2. b
+3. c
+
+(4)Microsoft 365 暗号化を理解します
+1. b
+2. c
+3. b
+
+(5)Microsoft Purview Message Encryption をデプロイする
+1. a
+2. b
+3. a
+
+(6)Microsoft Purview を使用して機密ラベルを作成および構成する
+1. b
+2. b
+3. a
+4. c
+5. a
+
+(7)データ保護に秘密度ラベルを適用する
+1. b
+2. a
+
+【②AZ-400: Azure と DSC を使用したコードとしてのインフラストラクチャの管理】
+(1)コードとしてのインフラストラクチャと構成管理を調べる
+1. a
+2. b
+3. b
+
+(2)Azure Resource Manager テンプレートを使用して Azure リソースを作成する 
+1. b
+2. c
+3. c
+
+(3)Azure CLI を使用して Azure リソースを作成する
+1. b
+2. a
+3. c
+
+(4)DevOps での Azure Automation を探索する
+1. a
+2. b
+3. c
+
+(5)Desired State Configuration (DSC) を実装する
+1. a
+2. c
+3. b
+
+(6)Bicep を実装する
+1. a
+2. b
+3. b
+
+【③SC-400: データ ライフサイクルとレコードの管理を実装する】
+(1)Microsoft Purviewでデータライフサイクルを管理する
+1. c
+2. a
+3. c
+4. c
+
+(2)Microsoft 365 のワークロードでデータの保持と削除を管理する 
+1. b
+2. a
+3. c
+4. b
+5. a
+
+(3)Microsoft Purview でレコードを管理する
+1. b
+2. c
+3. b
+
+【④SC-400: データ損失防止を実装する】
+(1)Microsoft Purview でデータ損失を防ぐ
+1. a
+2. a
+3. c
+4. b
+
+(2)Microsoft Defender for Cloud Apps および Power Platform 用に DLP ポリシーを構成する
+1. c
+2. a
+3. b
+
+(3)Microsoft 365 のデータ損失防止ポリシーとレポートの管理
+1. b
+2. b
+3. b
+4. a
+
+【⑤Microsoft 365 での情報保護とコンプライアンスの管理】
+【⑤-(1)SC-400: Microsoft 365 で Information Protection を実装する】
+(1)Microsoft Purview における情報保護とデータ ライフサイクル管理の概要
+1. c
+2. a
+3. a
+4. c
+5. b
+
+(2)保護とガバナンスのためにデータを分類する
+1. b
+2. b
+3. c
+4. a
+5. b
+
+(3)機密情報の種類を作成および管理する
+1. c
+2. b
+3. c
+
+(4)Microsoft 365 暗号化を理解します
+1. b
+2. c
+3. b
+
+(5)Microsoft Purview Message Encryption をデプロイする
+1. a
+2. b
+3. a
+
+(6)Microsoft Purview を使用して機密ラベルを作成および構成する
+1. b
+2. b
+3. a
+4. c
+5. a
+
+(7)データ保護に秘密度ラベルを適用する
+1. b
+2. a
+
+【⑤-(2)SC-400: データ損失防止を実装する】
+(1)Microsoft Purview でデータ損失を防ぐ
+1. a
+2. a
+3. c
+4. b
+
+(2)Microsoft Defender for Cloud Apps および Power Platform 用に DLP ポリシーを構成する
+1. c
+2. a
+3. b
+
+(3)Microsoft 365 のデータ損失防止ポリシーとレポートの管理
+1. b
+2. a
+3. b
+4. a
+
+【⑤-(3)SC-400: データ ライフサイクルとレコードの管理を実装する】
+(1)Microsoft Purviewでデータライフサイクルを管理する
+1. c
+2. a
+3. c
+4. c
+
+(2)Microsoft 365 のワークロードでデータの保持と削除を管理する
+1. b
+2. a
+3. c
+4. b
+5. b
+
+(3)Microsoft Purview でレコードを管理する
+1. b
+2. c
+3. b
+
+【⑤-(4)SC-400: Microsoft Purview を使用してデータとアクティビティを監視および調査する】
+(1)Microsoft 365 のコンプライアンスについて調べる
+1. c
+2. b
+3. c
+
+(2)Microsoft Purview コンプライアンス ポータル内のコンテンツを検索する
+1. c
+2. b
+3. b
+
+(3)Microsoft Purview eDiscovery (標準)
+1. a
+2. a
+3. b
+
+(4)Microsoft Purview 電子情報開示 (Premium) の管理
+1. c
+2. b
+3. a
+
+(5)Microsoft Purview 監査を使用した検索と調査
+1. a
+2. b
+3. c
+4. a
+5. c
+
+【⑤-(5)SC-400: Microsoft 365 でインサイダーとプライバシーのリスクを管理する】
+(1)Microsoft Purview コミュニケーション コンプライアンスの準備
+1. b
+2. a
+3. a
+4. c
+
+(2)Microsoft Purview でインサイダー リスクを管理する
+1. b
+2. a
+3. c
+4. a
+5. a
+
+(3)インサイダーリスク管理における適応型保護の実装
+1. b
+2. b
+3. c
+4. c
+
+(4)Microsoft Purview 情報バリアを実装する
+1. c
+2. a
+3. b
+4. a
+
+(5)SC-400: Microsoft 365 でインサイダーとプライバシーのリスクを管理する
+1. b
+2. c
+3. a
+
+(6)特権アクセス管理を実装する
+1. b
+2. a
+3. b
+
+(7)カスタマーロックボックスの管理
+1. a
+2. a
+3. c
+
+【⑥SC-400: Microsoft Purview を使用してデータとアクティビティを監視および調査する】
+(1)Microsoft 365 のコンプライアンスについて調べる
+1. c
+2. b
+3. c
+
+(2)Microsoft Purview コンプライアンス ポータル内のコンテンツを検索する
+1. c
+2. b
+3. b
+
+(3)Microsoft Purview eDiscovery (標準)
+1. a
+2. a
+3. b
+
+(4)Microsoft Purview 電子情報開示 (Premium) の管理
+1. c
+2. b
+3. a
+
+(5)Microsoft Purview 監査を使用した検索と調査
+1. a
+2. b
+3. c
+4. a
+5. c
+
+【⑦SC-400: Microsoft 365 でインサイダーとプライバシーのリスクを管理する】
+(1)Microsoft Purview コミュニケーション コンプライアンスの準備
+1. b
+2. a
+3. a
+4. c
+
+(2)Microsoft Purview でインサイダー リスクを管理する
+1. b
+2. a
+3. c
+4. c
+5. a
+
+(3)インサイダーリスク管理における適応型保護の実装
+1. b
+2. b
+3. c
+4. c
+
+(4)Microsoft Purview 情報バリアを実装する
+1. c
+2. a
+3. b
+4. a
+
+(5)Microsoft Priva で規制とプライバシー要件を管理
+1. b
+2. c
+3. a
+
+(6)特権アクセス管理を実装する
+1. b
+2. a
+3. b
+
+(7)カスタマーロックボックスの管理
+1. a
+2. a
+3. c
+
+【⑧SC-400: Microsoft Information Protection 管理者を教えるためのヒントとテクニックを入手する】
+(1)SC-400: Microsoft Information Protection 管理者を教えるためのヒントとテクニックを入手する
+1. b
+2. b
+3. c
+
+【⑨SC-400: Microsoft Information Protection 管理者を教える準備をする】
+(1)Microsoft Learn for Educators プログラムの概要
+1. c
+2. c
+3. b
+
+(2)Microsoft Learn for Educators プログラムにオンボードする
+1. b
+2. b
+3. c
+
+(3)Microsoft Learn for Educators コースの準備
+1. a
+2. c
+3. c
+
+(4)Microsoft Learn for Educators のコース計画
+1. a
+2. b
+3. a
+
+(5)Microsoft テクニカル トレーナーからのベスト プラクティスについて説明します
+1. c
+2. b
+3. c
+
+(6)講座配信準備用 Microsoft Learn for Educators
+1. b
+2. c
+
+(7)Microsoft Learn for Educators 学生認定資格
+1. a
+2. c
+
