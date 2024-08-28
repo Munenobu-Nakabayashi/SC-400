@@ -1,0 +1,759 @@
+□[001]393.3プリントサービス
+以下は、smb.confからのプリンタ共有に関する部分を抜粋したものです。
+（____）に入るWindowsに対してプリンタドライバをダウンロードさせるためのセクション名を選択せよ。
+
+(        )
+        path = /usr/local/samba/drivers/
+        read only = no
+        write list = @printadmin
+        force group = @printadmin
+        create mask = 0664
+        directory mask = 2775
+
+a. [print$]
+b. [printers]
+c. [homes]
+d. [global]
+
+□[002]392.4 Sambaのトラブルシューティング
+Sambaのsecrets.tdbに含まれる情報をすべて選択してください。
+
+a. Sambaユーザ情報
+b. Sambaサーバやドメインの識別子情報
+c. LDAPサーバの管理者パスワード
+d. アカウントポリシー
+
+□[003]393.2 Linuxファイルシステムと共有/サービスのパーミッション
+Sambaにおいて、以下の設定を行った共有ディレクトリにてファイルを作成した。作成されたファイルのパーミッションとして正しいものはどれか、選択せよ。
+
+[share]
+   path = /share
+   comment = Home Directories
+   browseable = yes
+   writable = yes
+   create mask = 0600
+   force create mode = 0644
+   directory mask = 0700
+   force directory mode = 0755
+
+a. 0600
+b. 0644
+c. 0700
+d. 0755
+
+□[004]390.3 OpenLDAPサーバのパフォーマンスチューニング
+OpenLDAPサーバを構築する際、検索速度の向上を行いたい。
+チューニングの方法として誤っているものを選択してください。
+
+a. データベースにmdbを利用する。
+b. LDAP v2に対応する。
+c. インデックスを作成する。
+d. キャッシュサイズを調整する。
+
+□[005]396.1 NetBIOSとWINS
+Sambaの名前解決を以下順序に設定したい。
+
+a. lmhostsファイル
+b. WINSサーバ
+c. Linuxのシステム(hosts、DNS等)
+d. ブロードキャスト
+上記の順で動作するname resolve orderの設定を記載してください。
+
+name resolve order = _____________
+
+□[006]393.1 ファイルサービス
+smbcquotasでユーザtestuserに対するクォータ(softlimit、及びhardlimit)を設定したい。
+以下の______に入るものは何か。
+
+smbcquotas -S _______:testuser:102400/200704 //127.0.0.1/sambashare
+
+a. UQLIM
+b. FSQLIM
+c. FSQFLAGS
+d. quota
+
+□[007]390.1 OpenLDAPのレプリケーション
+OpenLDAPのスレーブサーバにてsyncreplによるレプリケーションの設定を行いたい。
+refreshAndPersistで行う場合のリトライ設定で正しいものを選択してください。なおリトライのルールは「1分毎に3回同期、もし同期ができなかった場合は以降5分間隔で実施」とします。
+
+a. retry="60 3 300"
+b. retry="3 1 5 +"
+c. retry="60 3 300 +"
+d. retry="3 60 300 +"
+
+□[008]392.2 Sambaを設定する
+Sambaの設定ファイルのチェックを行いたい。
+smb.confの内容を解析してエラーがないか確認するコマンドは次のうちどれか選択してください。
+
+a. smbconf
+b. testparm
+c. smbcontrol
+d. tdbtool
+
+□[009]392.4 Sambaのトラブルシューティング
+Sambaの設定(smb.conf)において、debuglevelとLog levelについて正しいものを2つ選択せよ。
+
+a. debuglevelは、log levelの別名である
+b. log levelは、デフォルト値"3"である
+c. debuglevelは、log levelと併用するべきである
+d. log levelは、デフォルト値"1"である
+
+□[010]394.2 認証と許可およびWinbind
+以下のwbinfoの説明について、誤っているものを選択してください。
+
+a. wbinfo -g は、Windowsドメインに存在するすべてのグループを一覧表示する。
+b. wbinfo -u は、Windowsドメインに存在するすべてのユーザを一覧表示する。
+c. wbinfo -d は、すべてのドメイン名を一覧表示する。
+d. wbinfo -p は、winbindデーモンが動作中かどうかを確認する。
+
+□[011]392.3 Sambaの保守
+Sambaの設定ファイルを変更したので、smbcontrolコマンドで再読み込みさせたい。
+以下の( )に入るものはどれか。
+
+smbcontrol smbd (     )
+
+a. reload
+b. restart
+c. shutdown
+d. reload-config
+
+□[012]393.2 Linuxファイルシステムと共有/サービスのパーミッション
+Samba経由でのファイルの削除操作を、ログに記録するための設定を選択してください。
+
+a. full_audit:success = unlink
+b. full_audit:failure = connect
+c. full_audit:prefix = %T|%U|%I
+d. full_audit:facility = local1
+
+□[013]392.2 Sambaを設定する
+複数のインターフェイスを持つSambaにおいて、セキュリティ向上のため待ち受けインターフェイスを制限したい。空欄に入るsmb.confのパラメータ名として適切なものはどれか。
+
+(               ) = 192.168.111.250 127.0.0.1
+
+a. bind interfaces only = yes
+b. interfaces only
+c. socket address
+d. interfaces
+e. browsable
+
+□[014]396.2 アクティブディレクトリの名前解決
+Samba4をアクティブディレクトリドメインコントローラとして使用する場合、samba-tool dns コマンドでDNSの管理を行うことができます。samba-tool dns の説明について、誤っているものを選択してください。
+
+a. samba-tool dns add は、DNSレコードを追加する。
+b. samba-tool dns delete は、DNSレコードを削除する。
+c. samba-tool dns zoneadd は、DNSゾーンを追加する。
+d. samba-tool dns zonedelete は、DNSゾーンを削除する。
+
+□[015]392.1 Sambaの概念とアーキテクチャ
+以下のSambaデーモンのうち、ブラウジング機能の役割を担っているものはどれか。
+
+a. smbd
+b. nmbd
+c. samba
+d. winbindd
+
+□[016]391.2 アクティブディレクトリおよびKerberosとLDAPの統合
+シングルサインオンに関する説明について、誤っているものを選択してください。
+
+a. シングルサインオンは、1度の認証で様々なシステムの認証を行うことができる
+b. シングルサインオンを実現する仕組みの一つがKerberos認証である
+c. シングルサインオンは、WindowsログオンとLinuxへのログインを統合するなど、OSを超えた認証はできない
+d. Kerberos認証を使ったシングルサインオンはLinux系のディストリビューションでも利用できる
+
+□[017]391.1 PAMおよびNSSとLDAPの統合
+PAMやNSSとLDAPを連携させるモジュールはどれか、2つ選択せよ。
+
+a. pam_ldap
+b. ldap_pam
+c. ldap_nss
+d. nss_ldap
+
+□[018]394.1 ユーザアカウントとグループアカウントの管理
+Sambaのログインについて、以下の条件を満たすようにしたい。
+●存在するユーザ名が指定された時、パスワードが正しくないとログインを拒否する。
+●存在しないユーザ名が指定された時、ゲストアカウントとしてログインできる。
+正しい設定を一つ選択してください。
+
+a. map to guest = Never
+b. map to guest = Bad User
+c. map to guest = Bad Password
+d. map to guest = Bad Uid
+
+□[019]390.3 OpenLDAPサーバのパフォーマンスチューニング
+OpenLDAPの設定において属性に値が存在するかどうかを判断するインデックスタイプはどれか、選択せよ。
+
+a. pres
+b. eq
+c. sub
+d. none
+
+□[020]392.1 Sambaの概念とアーキテクチャ
+Sambaの説明で正しいものをすべて選択してください。
+
+a. Samba4はsmbd、nmbd、winbinddの3つのプロセスから構成されている。
+b. Samba3はActive Directoryの代替として機能することができる。
+c. Samba3はsmbd、nmbd、winbindの3つのプロセスから構成されている。
+d. Samba4はActive Directoryの代替として機能することができる。
+
+□[021]390.2 ディレクトリの保護
+OpenLDAPの非認証バインドについて正しい説明はどれか。
+
+a. ユーザ名・パスワードが要求される認証方式
+b. 名前もパスワードも要求されない認証方式
+c. ユーザ名のみ要求される認証方式
+d. パスワードのみ要求される認証方式
+
+□[022]393.2 Linuxファイルシステムと共有/サービスのパーミッション
+smb.confに以下の設定を行い、sambaを経由してshareディレクトリ配下にファイルの作成を行った。
+[share]
+        path = /share
+        public = yes
+        writable =yes
+        create mask = 0760
+        force create mode = 0644
+この時、Sambaによって作成されたファイルのパーミッションとして正しいものを一つ選択してください。
+
+a. -rwxrw----
+b. -rw-r--r--
+c. -rwxr-xr-x
+d. -rwxrw-r--
+
+□[023]390.1 OpenLDAPのレプリケーション
+以下のうち、OpenLDAPのレプリケーションに関して正しいものを選択せよ。
+
+a. refreshAndPersistを設定した場合、OpenLDAPはLDAPクライアントとの間で永続的な接続を維持しようとする。
+b. プロバイダのsyncreplディレクティブで、接続するコンシューマーを指定する。
+c. プロバイダとコンシューマーによるレプリケーションは、PULL型である。
+d. コンシューマーの保持するデータが、プロバイダに複製される。
+
+□[024]392.3 Sambaの保守
+Sambaサーバに対するuser01のアクセス状況のみを出力するコマンドを１つ選択してください。
+
+a. smbstatus -b user01
+b. smbstatus -d user01
+c. smbstatus -u user01
+d. smbstatus -S user01
+
+□[025]394.1 ユーザアカウントとグループアカウントの管理
+smb.confのforce user/force group設定について、正しいものを選択せよ。
+
+a. 該当ユーザアカウントでのアクセスを拒否する
+b. 指定されたユーザやグループの作成が出来なくなる
+c. 指定されたユーザやグループの権限で操作を実行する
+d. 該当グループアカウントでのアクセスを許可する
+
+□[026]390.1 OpenLDAPのレプリケーション
+OpenLDAPのレプリケーションについて、適切でない説明を1つ選択してください。
+
+a. syncreplでは、プロバイダが管理するエントリのうち、条件を満たす属性だけを指定してコンシューマに同期できる。
+b. OpenLDAP 2.4ではマルチマスタレプリケーションが実現できる。
+c. syncreplでは、同期状態をcookieで管理している。
+d. syncreplでは、プロバイダ側で存在しなくなったエントリをコンシューマ側で削除してから変更エントリの複製を行う。
+
+□[027]392.2 Sambaを設定する
+Sambaにてユーザレベルのセキュリティを利用する設定を行います。
+smb.confの中に記載する[global]セクション内に設定する内容として正しいものを選択してください。
+
+a. security = local
+b. security = domain
+c. security = user
+d. security = public
+
+□[028]392.2 Sambaを設定する
+日本語の環境でSambaを利用するときに、smb.confで設定すべきパラメータとして適切なものを２つ選びなさい。
+
+a. charset
+b. dos charset
+c. unix charset
+d. lang
+
+□[029]394.1 ユーザアカウントとグループアカウントの管理
+ADドメインにおいて、ユーザjoeのパスワード有効期限を90日に設定するためのコマンドとして、正しいものはどれか。
+
+a. samba-tool user expire joe --days=90
+b. samba-tool user enable joe --days=90
+c. samba-tool user setexpire joe --days=90
+d. samba-tool user add joe --days=90
+
+□[030]397.2 Windowsクライアントの操作
+Linuxサーバ(10.1.3.53)で共有されているリソースを、Windowsクライアントのコマンドプロンプトで確認するためのコマンドで正しいものを1つ選択してください。
+
+a. net view \10.1.3.53
+b. net share \10.1.3.53
+c. net use \10.1.3.53
+d. net file \10.1.3.53
+
+□[031]392.3 Sambaの保守
+tdbファイルに破損したデータがないか確認したい。使用するコマンドとオプションの組み合わせから正しいもの1つ選択せよ。
+
+a. smbcontrol -V
+b. smbstatus -p
+c. tdbbackup -h
+d. tdbbackup -v
+
+□[032]OpenLDAPのslapd.confファイルにインデックスを設定したい。
+uidNumber属性を持つすべてのエントリの検索を効率的に行うためのインデックスの指定方法として正しいものを選択してください。
+
+a. index uidNumber pres
+b. index uidNumber sub
+c. index uidNumber eq
+d. index uidNumber approx
+
+□[033]393.1 ファイルサービス
+Samba共有へアクセスした際、共有フォルダが表示されない。原因として考えられるものはどれか。
+
+a. browseable = noとなっている
+b. smbdが停止している
+c. read only = noが未設定である
+d. nmbdが停止している
+
+□[034]392.3 Sambaの保守
+現在Sambaに接続しているホストの一覧を表示するコマンドで正しいものを1つ選択してください。
+
+a. smbcontrol all staus
+b. smbstatus -S
+c. smbcontrol all reload-config
+d. smbstatus -L
+
+□[035]392.4 Sambaのトラブルシューティング
+SambaのデータベースであるTDBファイルの整合性を確認するコマンドを2つ選択してください。
+
+a. tdbdump -e TDBファイル名
+b. tdbtools TDBファイル名 check
+c. tdbbackup -v TDBファイル名
+d. tdbdump --check TDBファイル名
+
+□[036]390.2 ディレクトリの保護
+以下のうち、SASLオプションであるセキュリティ強度係数(SSF)のうち、最も強度の高いものはどれか。
+
+a. 0
+b. 1
+c. 56
+d. 112
+e. 128
+
+□[037]393.3 プリントサービス
+CUPSを利用した印刷システムをSambaにて設定をしたい。　
+空欄に入るsmb.confのパラメータ名はどれか。
+
+ [global]
+ (          ) = cups
+
+a. printer
+b. printing
+c. print
+d. printable
+
+□[038]390.1 OpenLDAPのレプリケーション
+LDAPサーバのマスタ/スレーブレプリケーション構成について、正しい説明を選択してください。
+
+a. マスターサーバだけがLDAP参照・更新を行うことができる。
+b. スレーブサーバだけがLDAP参照・更新を行うことができる。
+c. マスタサーバとスレーブサーバの両方がLDAP参照・更新を行うことができる。
+d. マスタサーバとスレーブサーバの両方がLDAP参照を行うことができ、マスタサーバだけがLDAP更新を行うことができる。
+
+□[039]396.1 NetBIOSとWINS
+以下のうち、NetBIOSとWINSに関して正しいものを2つ選択せよ。
+
+a. ローカルマスタブラウザは、同一セグメント内のサーバ一覧(ブラウズリスト)を提供する
+b. ドメインマスタブラウザは、複数セグメントにまたがるネットワークで使用される
+c. WINSサーバは、FQDNとIPアドレスの対応付けを行う
+d. NetBIOS名は、Windowsネットワークにおけるホスト名を指す
+
+□[040]390.2 ディレクトリの保護
+以下の説明のうち、OpenLDAPのセキュリティに関して正しいものを2つ選択せよ。
+
+a. 非認証バインドとは、認証にユーザー名のみが使用される。
+b. OpenLDAPのStartTLSでは、636/TCPが使用される。
+c. SASLは、認証時のユーザー名およびクライアントパスワードを暗号化する。
+d. OpenLDAPへのアクセスには、iptablesで389/TCPと636/TCPを許可する必要がある。
+
+□[041]392.1 Sambaの概念とアーキテクチャ
+SMBプロトコルで通信を行う際に利用するポートで間違っているものを1つ選択してください。
+
+a. TCPポートの138番
+b. TCPポートの139番
+c. UDPポートの137番
+d. UDPポートの138番
+
+□[042]390.2 ディレクトリの保護
+SASL認証でユーザ情報を登録しているデータベースとして正しいものを一つ選択してください。
+
+a. /etc/sasldatabase2
+b. /etc/sasluserdb
+c. /etc/saslpasswd
+d. /etc/sasldb2
+
+□[043]392.5 国際化
+以下のsmb.confのパラメータのうち、文字コードと関係がないものはどれか。
+
+a. dos charset
+b. display charset
+c. unix charset
+d. wins support
+
+□[044]394.1 ユーザアカウントとグループアカウントの管理
+idmapのadバックエンドの説明として間違っているものを一つ選択してください。
+
+a. adバックエンドはsmb.confの[global]セクションに設定する
+b. adバックエンドを設定した場合でも、デフォルトのバックエンドを設定しなければならない
+c. adバックエンドでは、WindowsユーザのUNIX属性のUIDの値をそのままUIDとして割り当てることができる
+d. adバックエンドでは、WindowsユーザのSIDからUID、GIDが割り当てられる
+
+□[045]390.1 OpenLDAPのレプリケーション
+OpenLDAPのレプリケーション動作に関する説明のうち、正しいものを1つ選択せよ。
+
+a. refreshOnlyが設定された場合、セッションの接続維持がされた状態でレプリケーションが行われる。
+b. refreshAndPersistが設定された場合、定期的にセッションを張りデータのレプリケーションが行われる。
+c. ワンショットモードをでslurpdを起動した場合、複製ログを処理するとデーモンが終了する。
+d. syncrepl方式でのレプリケーションでは、マスターサーバからスレーブサーバへLDAPデータの同期要求が行われる。
+
+□[046]392.2 Sambaを設定する
+Sambaの設定ファイルの内容を解析して、設定が正しいかどうか確認するコマンドとして適切なものをすべて選びなさい。
+
+a. testparm /etc/samba/smb.conf
+b. smbstatus
+c. smbcontrol nmbd reload-config
+d. testparm
+
+□[047]393.2 Linuxファイルシステムと共有/サービスのパーミッション
+マウントしたSambaのファイルシステム上にファイルを作成する際、smb.confにおいて必ず付与したい権限を指定するパラメータを選択せよ。
+
+a. create mask
+b. directory mask
+c. force create mode
+d. force directory mode
+
+□[048]392.2 Sambaを設定する
+Sambaの設定ファイルにはSamba変数を使用することができます。
+以下のSamba編集の説明のうち、誤っているものを選択してください。
+
+a. %u 接続しているユーザ名
+b. %d 現在のディレクトリ名
+c. %P 共有のルートディレクトリ
+d. %T 現在の日付と時刻
+
+□[049]392.4 Sambaのトラブルシューティング
+SambaのデータベースであるTDBファイルの内容を表示するためのコマンドは何か、コマンド名を答えよ。
+
+□[050]392.3 Sambaの保守
+smbstatusコマンドのオプションと説明の組み合わせのうち、正しいものを選択せよ。
+
+a. -p：smbdのプロセス一覧を表示する
+b. -s：接続一覧を表示する
+c. -U：指定ユーザーに関する情報のみ表示する
+d. -S：設定ファイルを指定する
+
+□[051]394.2 認証と許可およびWinbind
+Sambaのパスワードデータベースをセットアップします。
+smb.conf の passwd backend に設定する内容として、誤っているものを選択してください。
+
+a. passdb backend = tdbsam
+b. passdb backend = ldapsam:ldap://127.0.0.1
+c. passdb backend = passwd:/etc/passwd
+d. passdb backend = smbpasswd
+
+□[052]397.1 CIFS連携
+CIFSファイルシステムをマウントするmountコマンドのオプションの説明として、誤っているものを選択してください。
+
+a. username=<user>
+   CIFSに接続するユーザ名を<user>に指定する。
+b. password=<password>
+   CIFSに接続するパスワードを<password>に指定する。
+c. secret=<filename>
+   CIFS接続時に使用するユーザ、パスワード、ドメインを記載したファイルを<filename>に指定する。
+d. uid=<username or uid>
+   マウントされたファイルシステムの全ファイル・ディレクトリの所有者を<username or uid>に設定する。
+
+□[053]393.2 Linuxファイルシステムと共有/サービスのパーミッション
+Sambaの設定ファイルsmb.confで設定するパラメータと説明の組み合わせで、間違っているものはどれか、選択せよ。
+
+a. force create mode : Sambaによって作成されたファイルに必ず適用されるパーミッション
+b. browsable : WebブラウザからSambaへのアクセスを許可するかどうか
+c. hide dot files : ドットで始まるファイル名のファイルを隠しファイルとして扱うかどうか
+d. writeable : ファイル等の書き込みを許可するかどうか
+
+□[054]390.3 OpenLDAPサーバのパフォーマンスチューニング
+OpenLDAPサーバでは、データ検索を効率的に行うためにインデックスを設定することができます。
+近似検索を行いたい場合に指定する設定を選択せよ。
+
+a. pres
+b. eq
+c. sub
+d. approx
+e. none
+
+□[055]395.2 Samba4のAD互換ドメインコントローラ
+Samba4で使用されるポート番号と説明の組み合わせとして間違っているものを選びなさい。
+
+a. TCP/UDP 88 : ケルベロス
+b. TCP/UDP 445 : SMB
+c. TCP 636 : LDAPS
+d. TCP 3268 : RPC
+
+□[056]392.5 国際化
+Linuxに設定したsamba共有をWindowsのドライブに割り当て、コマンドウィンドウでDIRコマンドを実行したところ、日本語のファイル名が化けた。
+下記はsmb.confの一部だが、修正すべき行は次のうちどれか。なお、Windowsの地域設定は日本語である。
+
+a. unix charset = UTF-8
+b. display charset = UTF-8
+c. dos charset = UTF-8
+d. default case = lower
+e. case sensitive = yes
+
+□[057]391.2 アクティブディレクトリおよびKerberosとLDAPの統合
+Active DirectoryとLDAPの認証統合の説明として間違っているものを選びなさい。
+
+a. Active DirectoryはLDAPをベースとしたディレクトリサービスである
+b. Active DirectoryはKerberosによるシングルサイオン認証をサポートしている
+c. Active Directoryでユーザー認証を行えば、Linux側での認証は不要となる
+d. Active Directoryとの認証統合を行う主な用途としてSambaによるファイルサーバーが挙げられる
+
+□[058]391.1 PAMおよびNSSとLDAPの統合
+PAMとNSSをLDAPと連携させる理由として正しいものを選びなさい。
+
+a. LDAPの情報でユーザー認証を行う
+b. シングルサインオン認証を実現する
+c. 認証情報を暗号化して通信する
+d. 認証情報の脆弱性を検知する
+
+□[059]390.3 OpenLDAPサーバのパフォーマンスチューニング
+OpenLDAPのインデックスの解説として間違っているものを選びなさい。
+
+a. インデックスはデータの検索を高速化するための仕組みである
+b. インデックスはすべての属性に設定しておく必要がある
+c. インデックスはデータを追加した際に更新される
+d. インデックスは属性ごとに種類を変更できる
+
+□[060]390.2 ディレクトリの保護
+OpenLDAPでSSL/TLSを使用して通信を保護するために不要なものを選びなさい。
+
+a. CA（認証局）の証明書
+b. サーバ証明書
+c. サーバの秘密鍵
+d. クライアント証明書
+
+□[061]390.3 OpenLDAPサーバのパフォーマンスチューニング
+OpenLDAPのインデックスのオプションの説明として適切なものを選択してください。
+
+a. presは、近似値の検索のインデックスを作成するオプションである
+b. subは、文字列の部分一致検索のインデックスを作成するオプションである
+c. eqは、値の存在を検索する場合のインデックスを作成するオプションである
+d. approxは、値の完全一致検索のインデックスを作成するオプションである
+
+□[062]335.2 クラスタファイルシステム
+OpenLDAPのレプリケーションの説明として間違っているものを選びなさい。
+
+a. コンシューマーが多数ある場合、レプリカハブを用意することで負荷を低減できる
+b. スレーブサーバがマスターサーバに接続して差分データを取得する
+c. マルチマスターレプリケーションではデータの整合性が取れなくなる可能性がある
+d. refreshAndPersistを設定すると複製したデータが永続化される
+
+□[063]335.2 クラスタファイルシステム
+OpenLDAPのレプリケーションの説明として間違っているものを選びなさい。
+
+a. コンシューマーが多数ある場合、レプリカハブを用意することで負荷を低減できる
+b. スレーブサーバがマスターサーバに接続して差分データを取得する
+c. マルチマスターレプリケーションではデータの整合性が取れなくなる可能性がある
+d. refreshAndPersistを設定すると複製したデータが永続化される
+
+□[064]394.1 ユーザアカウントとグループアカウントの管理
+pdbeditコマンドを使ってSambaのユーザデータベースからSambaユーザーを削除するコマンドを選びなさい。
+
+a. pdbedit -a -u ユーザー名
+b. pdbedit -x -u ユーザー名
+c. pdbedit -a -U ユーザー名
+d. pdbedit -x -U ユーザー名
+
+□[065]392.1 Sambaの概念とアーキテクチャ
+Sambaに関する説明で正しくないものを選びなさい。
+
+a. Samba3からDNS/LDAPの機能を包括するようになり、ActiveDirectoryの代替となることができる。
+b. smbdはファイル共有、印刷サービスを提供するデーモンである。
+c. winbindを使用することで、WindowsとLinuxのログインを統合することができる。
+d. nmbdはSMB/CIFSクライアントのネームサービスリクエスト要求に応答することが出来る。
+
+□[066]393.1 ファイルサービス
+以下のSambaのパラメータの中から共有フォルダへのアクセスに影響を与えない設定を選びなさい。
+
+a. write list
+b. invalid users
+c. guest ok
+d. browseable
+
+□[067]390.1 OpenLDAPのレプリケーション
+refreshOnlyとrefreshAndPersistの違いについて正しい説明を選びなさい。
+
+a. refreshAndPersistを設定した場合、定期的にデータの同期が行われる。
+b. refreshOnlyを設定した場合、プロバイダからコンシューマへデータの同期を行う
+c. refreshAndPersistを設定した場合、プロバイダからコンシューマへデータの同期を行う
+d. refreshOnlyを設定した場合、プロバイダとコンシューマ間のセッションが常に維持される
+
+□[068]397.2 Windowsクライアントの操作
+Windowsクライアントについての解説で間違っているものを選びなさい。
+
+a. 「ネットワーク」を開くと、Windowsネットワークのブラウジングが行われる
+b. net viewコマンドでWindowsネットワーク上のすべてのコンピューターをブラウジングできる
+c. 自分の参加しているドメインまたはワークグループを確認するにはnet config workstationコマンドを実行する
+d. Windowsクライアントからファイル共有にアクセスすると、デフォルトでログオン認証に使用したユーザ名とパスワードが認証に利用される
+
+□[069]396.2 アクティブディレクトリの名前解決
+Samba4のDNSについての解説で間違っているものを選びなさい。
+
+a. Samba4でアクティブディレクトリを構築するにはDNSの機能も必要となる
+b. Samba4のDNS機能は、samba-tool dnsコマンドで操作できる
+c. Samba4内部のDNSで名前解決できないリクエストはdns forwarderで指定したDNSで名前解決を行う
+d. Samba4内部のDNSで管理するゾーン名はsmb.confで定義する
+
+□[070]396.1 NetBIOSとWINS
+Windowsネットワークのネットワークブラウジング機能についての解説で間違っているものを選びなさい。
+
+a. ネットワークブラウジング機能はSamba 3では主にnmbdが受け持っている
+b. マスタ・ブラウザがコンピューター名とIPアドレスのリストを保持している
+c. ドメインマスタブラウザはドメインに1つ必要となる
+d. 複数セグメントに渡るWindowsネットワークの名前解決にはWINSサーバを利用する
+
+□[071]395.3 Sambaをドメインメンバーサーバとして設定する
+SambaのADドメイン参加についての解説で間違っているものを選びなさい。
+
+a. Samba4のみADドメインに参加させることができる
+b. クライアントはアクティブディレクトリで認証を行う
+c. Sambaへのアクセス認証はKerberos認証を利用する
+d. ADドメインへの参加にはnetコマンドを利用する
+
+□[072]395.2 Samba4のAD互換ドメインコントローラ
+Samba4をADのドメインコントローラーとして動作させるためにserver roleに設定する値として正しいものを選びなさい。
+
+a. AUTO
+b. ADS
+c. CLASSIC PRIMARY DOMAIN CONTROLLER
+d. ACTIVE DIRECTORY DOMAIN CONTROLLER
+
+□[073]395.1 SambaのPDCとBDC
+ドメインコントローラーについての解説で間違っているものを選びなさい。
+
+a. ドメインコントローラーはWindowsクライアントのドメインログオン認証を行う
+b. PDCはドメインマスターとしてドメイン情報を管理する
+c. 移動プロファイルを設定すると、ユーザーの固有情報をサーバーに保管できる
+d. 移動プロファイルの保管場所はログオンスクリプト内に記述しておく
+
+□[074]394.2 認証と許可およびWindbind
+Winbindについての解説で間違っているものを選びなさい。
+
+a. Winbindを使用するとADやSambaの認証情報をLinuxから利用できる
+b. libnss_winbindは認証情報取得にWinbindを利用するためのライブラリである
+c. libpam_winbindはPAMの認証にWinbindを利用するためのライブラリである
+d. wbinfoコマンドを利用してWinbindをADドメインに参加させることができる
+
+□[075]394.1 ユーザアカウントとグループアカウントの管理
+samba-toolについての解説で間違っているものを選びなさい。
+
+a. samba-toolを使うと、Samba 4で構築したActive Direcoryを操作できる
+b. ユーザー追加は samba-tool user createコマンドを使用する
+c. グループ参加者の確認は samba-tool group listコマンドを使用する
+d. Winbindを利用する事でsamba-toolで登録した情報をLinuxで利用できる
+
+□[076]393.3 プリントサービス
+Sambaのプリンタ共有についての解説で間違っているものを選びなさい。
+
+a. SambaはLinuxで設定されたプリンタを自動的にプリンタ共有としてWindowsクライアントに提供することができる
+b. Sambaのプリンタ共有を利用するには、Windowsクライアントにプリンタドライバをインスト－ルする必要がある
+c. Sambaのプリンタ共有を利用するには、Linuxにプリンタドライバをインスト－ルする必要がある
+d. SambaはWindowsクライアントのプリンタドライバを自動でインストールさせることができる
+
+□[077]393.2 Linuxファイルシステムと共有/サービスのパーミッション
+Sambaのパーミッションについての解説で間違っているものを選びなさい。
+
+a. SambaはLinux側のパーミッションを利用してアクセス制御を行う
+b. デフォルトパーミッションはcreate maskやdirectory maskで設定される
+c. force create modeやforce directory modeを設定するとパーミッションを変更できない
+d. ACLによるアクセス制御はext3ファイルシステムのみサポートしている
+
+□[078]393.1 ファイルサービス
+Sambaのファイル共有についての解説で間違っているものを選びなさい。
+
+a. [homes]で共有を適切に設定することで、ユーザーのホームディレクトリを共有できる
+b. smbcquotasで容量制限の設定や確認が行える
+c. IPC$は利用可能なリソース情報の取得などを行うための特殊な共有である
+d. mountコマンドではSambaの共有をLinuxでマウントすることができないのでsmbmountコマンドを使用する
+
+□[079]392.5 国際化
+Sambaの文字コードについての解説で間違っているものを選びなさい。
+
+a. Sambaの文字コード設定が主に影響するのはファイル名やフォルダ名である
+b. Windows側とLinux側で異なる文字コードを扱うことができる
+c. マッピングファイルを使うことでWindows側の日本語ユーザー名でSambaにアクセスすることができる
+d. Sambaで日本語のコンピュータ名を扱うことはできない
+
+□[080]392.4 Sambaのトラブルシューティング
+Sambaの簡易データベース(TDB)についての解説で間違っているものを選びなさい。
+
+a. TDBにはSambaの各種設定が格納されている
+b. TDBはkey-value型のデータベースとして値を保持している
+c. TDBは目的に応じて複数のTDBファイルに分かれている
+d. TDBファイルは自動的にバックアップされるので、バックアップディレクトリを確保する
+
+□[081]392.3 Sambaの保守
+Sambaの保守についての解説で間違っているものを選びなさい。
+
+1. smbstatusコマンドを実行することで、Sambaの各種状態を取得できる
+2. smbcontrolコマンドを実行することで、Sambaに対して様々な指示が送れる
+3. tdbbackupコマンドを実行することで、Sambaが使用しているTDBのバックアップが行える
+4. tdbbackupコマンドはSambaが停止している時に実行する必要がある
+
+□[082]392.2 Sambaを設定する
+smb.confについての解説で間違っているものを選びなさい。
+
+a. smb.confには全体設定のほか、ファイル、プリンタの共有を記述する
+b. Samba全体の設定はすべて[global]セクションに設定する
+c. プリンタ共有は[printers]またはプリンタ名のセクションに設定する
+d. ファイル共有はすべて[shares]セクションに設定する
+
+□[083]392.1 Sambaの概念とアーキテクチャ
+Sambaのプロセスについての解説で間違っているものを選びなさい。
+
+a. smbdはファイル共有を行うデーモンである
+b. nmbdは名前解決を行うデーモンである
+c. winbinddはSambaをドメインコントローラーとして動作させるデーモンである
+d. Samba 4のAD DCではsambaプロセスが動作する
+
+□[084]391.2 アクティブディレクトリおよびKerberosとLDAPの統合
+LDAPとActive Directoryの統合についての説明で間違っているものを選びなさい。
+
+a. Active DirectoryのKerberos認証を使って、Linuxを認証できる
+b. Kerberos認証はシングル・サインオンを実現する認証の仕組みである
+c. シングル・サインオンは1回の認証で複数サービスの認証が行える
+d. LinuxはActive Directoryのドメインには参加できない
+
+□[085]391.1 PAMおよびNSSとLDAPの統合
+LDAPとNSS、PAMの統合についての解説で間違っているものを選びなさい。
+
+a. /etc/nsswitch.confを設定することでLDAPを参照するように設定できる
+b. LDAPとPAMの統合にはpam_ldapを利用する
+c. LDAPでの認証を行うには/etc/shadowにもユーザーを記述する必要がある
+d. LDAPに格納されたパスワードをpasswdコマンドで変更できる
+
+□[086]390.3 OpenLDAPサーバのパフォーマンスチューニング
+OpenLDAPのパフォーマンスの説明として間違っているものを選びなさい。
+
+a. インデックスを作成することでLDAPの情報を更新する速度が速くなる
+b. インデックスの作成はslapd.confに設定し、slapindexコマンドを実行する
+c. DB_CONFIGの設定で、バックエンドDBの動作をチューニングできる
+d. メモリ割り当てを増やすことでOpenLDAPの高速化が行える
+
+□[087]390.2 ディレクトリの保護
+OpenLDAPのセキュリティの説明として間違っているものを選びなさい。
+
+a. LDAPには認証に関する情報が含まれるので、暗号化を行う必要がある
+b. LDAP通信の暗号化にはSSL/TLSを使った暗号化が利用できる
+c. LDAP通信の接続を保護するためにダイジェスト認証が使用できる
+d. LDAP通信を可能とするにはファイアーウォールの設定でポート389のみ通信可能に設定する
+
+□[088]390.1 OpenLDAPのレプリケーション
+OpenLDAPのレプリケーションの説明として間違っているものを選びなさい。
+
+a. マスター・スレーブ方式では、マスターへの変更がスレーブに適用される
+b. マスター・スレーブ方式では、スレーブに対する更新要求はエラーになる
+c. マルチマスター方式では、一方への更新が他方に反映される
+d. マルチマスター方式では、処理性能に合わせて負荷が自動的に分散される
+
